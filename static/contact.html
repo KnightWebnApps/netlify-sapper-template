@@ -4,28 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
+  <link href=contact.css rel=stylesheet>
 </head>
 <body>
-  <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+  <nav class="svelte-11kwxiv"> 
+    <ul class="svelte-11kwxiv"> 
+      <li class="svelte-11kwxiv">
+        <a class="svelte-11kwxiv" href=.>Home</a>
+      </li> 
+      <li class="svelte-11kwxiv">
+        <a class="svelte-11kwxiv" href=getting-started>Getting Started</a>
+      </li> 
+      <li class="svelte-11kwxiv">
+        <a class="svelte-11kwxiv" href=blog rel=prefetch>Blog</a>
+      </li> 
+    </ul> 
+  </nav>
+  <div class="form-area">
+    <form name="contact" method="POST" data-netlify="true">
+      <label>Your Name</label>   
+      <input type="text" name="name" />
+      <label>Your Email</label>
+      <input type="email" name="email" />
+      <label>Message: </label>
+      <textarea name="message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
 
 </body>
 </html>
