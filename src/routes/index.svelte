@@ -38,19 +38,26 @@
 </svelte:head>
 
 <script>
-  import { onMount } from 'svelte';
+	import { goTo } from '@sapper/app';
+	import { onMount } from 'svelte';
 
-  onMount(() => {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  });
+	onMount(() => {
+		if (window.netlifyIdentity) {
+		window.netlifyIdentity.on("init", user => {
+			if (!user) {
+			window.netlifyIdentity.on("login", () => {
+				document.location.href = "/admin/";
+			});
+			}
+		});
+		}
+	});
+
+	function viewContact ( ){
+		sapper.goTo('../contact.html')
+	};
+
+
 </script>
 
 <h1>Great success!</h1>
@@ -60,4 +67,4 @@
 	<figcaption>HIGH FIVE!</figcaption>
 </figure>
 
-<p><strong>Go to <a href="/getting-started">getting started</a>.</strong></p>
+<p><strong>Go to <button on:click={viewContact}>getting started</button>.</strong></p>
