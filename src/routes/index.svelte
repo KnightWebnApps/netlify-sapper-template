@@ -60,4 +60,4 @@
 	<figcaption>HIGH FIVE!</figcaption>
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<p><strong>Go to <a href="/getting-started">getting started</a>.</strong></p>
