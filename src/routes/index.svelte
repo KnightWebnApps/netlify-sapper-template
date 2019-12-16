@@ -38,7 +38,6 @@
 </svelte:head>
 
 <script>
-	import { goTo } from '@sapper/app';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -53,10 +52,6 @@
 		}
 	});
 
-	function viewContact ( ){
-		sapper.goTo('../contact.html')
-	};
-
 
 </script>
 
@@ -67,4 +62,4 @@
 	<figcaption>HIGH FIVE!</figcaption>
 </figure>
 
-<p><strong>Go to <button on:click={viewContact}>getting started</button>.</strong></p>
+<p><strong>Go to <a href="getting-started">getting started</a>.</strong></p>

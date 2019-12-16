@@ -24,12 +24,28 @@
     };
 </script>
 
-<form name="contact" method="POST" data-netlify="true">
-    <label>Your Name</label>   
-    <input type="text" name="name" />
-    <label>Your Email</label>
-    <input type="email" name="email" />
-    <label>Message: </label>
-    <textarea name="message"></textarea>
-    <button type="submit">Send</button>
+<form on:submit={handleSubmit} action="POST" name="contact" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+    <label for="name">Name</label>
+    <input 
+        name='name' 
+        placeholder="Full Name Here" 
+        type="text"
+        bind:value={formData.name}
+    >
+    <label for="email">Email</label>
+    <input 
+        name='email'
+        placeholder="Enter Email Address Here"
+        type="email"
+        bind:value={formData.email}
+    >
+    <label for="message">Message</label>
+    <input 
+        name='message'
+        placeholder="Enter Message Here"
+        type="message"
+        bind:value={formData.message}
+    >
+    <button type="submit"> Submit </button>
 </form>
