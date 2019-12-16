@@ -24,3 +24,8 @@ npm install netlify-cli -g
 
 3) Customize Your Project
 
+4) Deploy with Netlify
+```
+netlify deploy
+```
+
